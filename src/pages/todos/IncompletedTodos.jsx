@@ -4,7 +4,6 @@ import { deleteTodo, toggleTodo } from "../../features/todos/todosSlice";
 
 function IncompletedTodos() {
   const todos = useSelector((state) => state.todos.todos);
-
   const incompletedTodos = todos.filter((todo) => !todo.completed);
 
   const dispatch = useDispatch();
