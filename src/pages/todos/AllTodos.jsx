@@ -19,6 +19,7 @@ function AllTodos() {
         <>
             {todos.map((todo, index) => (
                 <TodoCard key={index}
+                    data={todo}
                     content={todo.text} 
                     completed={todo.completed} 
                     onToggle={() => handleToggle(todo.id)}
