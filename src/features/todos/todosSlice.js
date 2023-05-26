@@ -22,7 +22,8 @@ export const todosSlice = createSlice({
                 completed: false,
             };
 
-            state.todos.push(newTodo);
+            // state.todos.push(newTodo);
+            state.todos = [newTodo, ...state.todos];
             state.userInput = "";
         },
         toggleTodo: (state, action) => {
