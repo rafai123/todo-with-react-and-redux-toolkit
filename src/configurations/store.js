@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import todosReducer from "../features/todos/todosSlice";
-import {loadTodosFromLocalStorage, saveTodosToLocalStorage } from "../utils/localstorage";
+import { loadTodosFromLocalStorage, saveTodosToLocalStorage } from "../utils/localstorage";
 
 const setupStore = () => {
   const store = configureStore({
