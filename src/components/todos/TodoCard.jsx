@@ -20,7 +20,7 @@ const TodoCard = ({content, completed, onToggle, onRemove}) => {
                     />
                     <span className="ml-2 text-slate-700 font-semibold cursor-pointer hover:font-bold  inline-block text-2xl hover:text-green-700" onClick={onToggle}>{completed ?  <ImCheckboxChecked /> : (<ImCheckboxUnchecked /> )}</span>
                     <button className="ml-2 text-slate-700 font-semibold cursor-pointer hover:font-bold  inline-block text-2xl hover:text-indigo-600"><FiEdit /></button>
-                <button onClick={onRemove} className="p-2 text-2xl hover:text-rose-500"><IoTrashBinSharp /></button>
+                <button onClick={onRemove} className="p-2 text-2xl hover:text-rose-500"><IoTrashBinSharp /> </button>
                 </div>
             </div>
         </>
