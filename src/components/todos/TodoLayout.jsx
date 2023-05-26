@@ -21,7 +21,7 @@ const TodoLayout = () => {
   return (
     <div>
       <form onSubmit={handleCreateTodo}>
-        <div className="container flex mx-auto items-center align-middle justify-between sm:max-w-md: md:max-w-xl lg:max-w-2xl">
+        <div className="container flex mx-auto items-center align-middle justify-between sm:max-w-md: md:max-w-xl lg:max-w-2xl mt-10">
           <input type="text" value={userInput} onChange={(e) => handleUserInput(e.target.value)} placeholder="Write your todo here" className="border-2 border-gray-400 rounded-lg px-4 py-3 w-full shadow-lg" />
           <button className="ml-1 text-5xl shadow-lg border-solid border-2 border-slate-700  rounded-lg hover:text-slate-50 hover:bg-slate-800">
             <MdOutlinePlaylistAdd />
