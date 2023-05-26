@@ -15,6 +15,7 @@ export function loadTodosFromLocalStorage() {
     }
 
     return JSON.parse(serializedState);
+    
   } catch (e) {
     console.error(e);
     return undefined;
