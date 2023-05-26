@@ -16,7 +16,7 @@ export const todosSlice = createSlice({
             }
 
             const newTodo = {
-                id: Math.floor(Math.random() * 1000),
+                id: Math.floor(Math.random() * 100000),
                 text: state.userInput,
                 completed: false,
             };
