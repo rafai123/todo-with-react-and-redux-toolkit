@@ -16,15 +16,13 @@ const TodoLayout = () => {
     dispatch(setUserInput({ userInput }));
   };
 
-  const styleNavlink = "font-bold py-2 px-10 border-[1px] border-solid border-slate-700 rounded-lg shadow-lg hover:bg-slate-600 hover:text-slate-100"
+  const styleNavlink = "font-bold py-2 px-10 border-[1px] border-solid border-slate-700 rounded-lg shadow-lg hover:bg-slate-600 hover:text-slate-100";
 
   return (
     <div>
       <form onSubmit={handleCreateTodo}>
         <div className="container flex mx-auto items-center align-middle justify-between sm:max-w-md: md:max-w-xl lg:max-w-2xl">
-          <input type="text" value={userInput} onChange={(e) => handleUserInput(e.target.value)} placeholder="Write your todo here" 
-            className="border-2 border-gray-400 rounded-lg px-4 py-3 w-full shadow-lg" 
-          />
+          <input type="text" value={userInput} onChange={(e) => handleUserInput(e.target.value)} placeholder="Write your todo here" className="border-2 border-gray-400 rounded-lg px-4 py-3 w-full shadow-lg" />
           <button className="text-5xl shadow-lg border-solid border-2 border-slate-700  rounded-lg hover:text-slate-50 hover:bg-slate-800">
             <MdOutlinePlaylistAdd />
           </button>
@@ -34,13 +32,19 @@ const TodoLayout = () => {
       <nav>
         <ul className="flex gap-10 my-7 flex-wrap  container mx-auto justify-between align-middle sm:max-w-md: md:max-w-xl lg:max-w-2xl ">
           <li>
-            <NavLink to="/" className={styleNavlink} >All</NavLink>
+            <NavLink to="/" className={styleNavlink}>
+              All
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/incomplete" className={styleNavlink}>Incomplete</NavLink>
+            <NavLink to="/incomplete" className={styleNavlink}>
+              Incomplete
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/completed" className={styleNavlink}> Completed</NavLink>
+            <NavLink to="/completed" className={styleNavlink}>
+              Completed
+            </NavLink>
           </li>
         </ul>
       </nav>
