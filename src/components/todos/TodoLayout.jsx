@@ -16,6 +16,8 @@ const TodoLayout = () => {
     dispatch(setUserInput({ userInput }));
   };
 
+  const styleNavlink = "font-bold py-2 px-10 border-[1px] border-solid border-slate-700 rounded-lg shadow-lg hover:bg-slate-600 hover:text-slate-100"
+
   return (
     <div>
       <form onSubmit={handleCreateTodo}>
@@ -30,15 +32,15 @@ const TodoLayout = () => {
       </form>
 
       <nav>
-        <ul className="flex justify-center gap-4 my-3 flex-wrap">
+        <ul className="flex gap-10 my-7 flex-wrap  container mx-auto justify-between align-middle sm:max-w-md: md:max-w-xl lg:max-w-2xl ">
           <li>
-            <NavLink to="/" className="font-bold py-2 px-4 border-2 border-solid border-slate-700 rounded-lg shadow-lg hover:bg-slate-100 hover:text-slate-800" >All</NavLink>
+            <NavLink to="/" className={styleNavlink} >All</NavLink>
           </li>
           <li>
-            <NavLink to="/incomplete">Incomplete</NavLink>
+            <NavLink to="/incomplete" className={styleNavlink}>Incomplete</NavLink>
           </li>
           <li>
-            <NavLink to="/completed">Completed</NavLink>
+            <NavLink to="/completed" className={styleNavlink}> Completed</NavLink>
           </li>
         </ul>
       </nav>

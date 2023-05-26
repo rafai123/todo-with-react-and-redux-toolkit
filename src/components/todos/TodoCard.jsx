@@ -7,8 +7,8 @@ import { editTodo } from "../../features/todos/todosSlice";
 
 const TodoCard = ({ data, content, completed, onToggle, onRemove }) => {
 
-  const cardStyle = "flex container justify-between mx-auto max-w-full border shadow-lg px-5 py-3 rounded-lg border mt-4 items-center";
-  const contentStyle = "text-slate-700 font-medium capitalize text-xl";
+  const cardStyle = "flex container justify-between mx-auto max-w-full border shadow-lg px-5 py-3 rounded-lg border mt-4 items-center sm:max-w-md: md:max-w-xl lg:max-w-2xl";
+  const contentStyle = " font-medium capitalize text-xl";
 
   const dispatch = useDispatch();
 
@@ -42,14 +42,14 @@ const TodoCard = ({ data, content, completed, onToggle, onRemove }) => {
 
   return (
     <>
-      <div className={completed ? `bg-sky-200 ${cardStyle}` : `bg-red-200 ${cardStyle}`}>
+      <div className={completed ? `bg-slate-700 text-slate-100 ${cardStyle}` : `bg-slate-100 text-slate-700 ${cardStyle}`}>
         {taskContent}
         <div className="flex gap-5 items-center">
           <span className="ml-2 text-slate-700 font-semibold cursor-pointer hover:font-bold  inline-block text-2xl hover:text-green-700" onClick={onToggle}>
-            {completed ? <ImCheckboxChecked /> : <ImCheckboxUnchecked />}
+            {completed ? <ImCheckboxChecked className="text-slate-100 hover:text-slate-50 hover:shadow-md hover:shadow-slate-50" /> : <ImCheckboxUnchecked  />}
           </span>
           <button onClick={handleBtnEdit} className="ml-2 text-slate-700 font-semibold cursor-pointer hover:font-bold  inline-block text-2xl hover:text-indigo-600">
-            {isEditing ? <IoSave /> : <FiEdit />}
+            {isEditing ? <IoSave className={completed ? "text-slate-100" : "text-slate-700"} /> : <FiEdit className={completed ? "text-slate-100" : "text-slate-700"} />}
           </button>
           <button onClick={onRemove} className="p-2 text-2xl hover:text-rose-500">
             <IoTrashBinSharp />
