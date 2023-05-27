@@ -16,7 +16,7 @@ const TodoLayout = () => {
     dispatch(setUserInput({ userInput }));
   };
 
-  const styleNavlink = "font-bold py-2 px-10 border-[1px] border-solid border-slate-700 rounded-lg shadow-lg hover:bg-slate-600 hover:text-slate-100";
+  const styleNavlink = "font-bold py-2 px-4 border-[1px] border-solid border-slate-700 rounded-lg shadow-lg hover:bg-slate-600 hover:text-slate-100 sm:px-6 md:px-8 lg:px-10 ";
 
   return (
     <div>
