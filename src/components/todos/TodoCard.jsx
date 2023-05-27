@@ -7,7 +7,7 @@ import { editTodo } from "../../features/todos/todosSlice";
 
 const TodoCard = ({ data, content, completed, onToggle, onRemove }) => {
 
-  const cardStyle = "flex container justify-between mx-auto max-w-full border shadow-lg px-5 py-3 rounded-lg border mt-4 items-center sm:max-w-md: md:max-w-xl lg:max-w-2xl";
+  const cardStyle = "flex container justify-between mx-auto max-w-full border shadow-lg px-5 py-3 rounded-lg border mt-4 items-center sm:max-w-md: md:max-w-xl lg:max-w-2xl ";
   const contentStyle = " font-medium capitalize text-xl";
 
   const dispatch = useDispatch();
@@ -41,7 +41,7 @@ const TodoCard = ({ data, content, completed, onToggle, onRemove }) => {
 
 
   return (
-    <>
+    <div className="px-1">
       <div className={completed ? `bg-slate-700 text-slate-100 ${cardStyle}` : `bg-slate-100 text-slate-700 ${cardStyle}`}>
         {taskContent}
         <div className="flex gap-5 items-center">
@@ -56,7 +56,7 @@ const TodoCard = ({ data, content, completed, onToggle, onRemove }) => {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
